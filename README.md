@@ -1,4 +1,8 @@
 # lnGiveaway-frontend
 
-## DEV
-Run `yarn start`
+### DEV
+Clone the repository
+
+Run  `yarn install`
+
+Run  `yarn run watch`
