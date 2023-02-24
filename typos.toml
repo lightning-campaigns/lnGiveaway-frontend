@@ -1,0 +1,6 @@
+[default.extend-identifiers]
+foo = "foo"
+bar = "bar"
+
+[files]
+extend-exclude = ["*.svg", "node_modules", "target", "dist", "build", "docs", ".env"]
