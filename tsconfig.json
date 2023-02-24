@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "module": "ES6",
+    "target": "ES6",
+    "jsx": "react",
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "baseUrl": "./",
+    "paths": {
+      "@src/*": ["src/*"]
+    },
+  },
+  "types": ["node"],
+  "include": ["src/**/*.ts", "src/**/*.tsx"],
+  "exclude": ["node_modules"]
+}
