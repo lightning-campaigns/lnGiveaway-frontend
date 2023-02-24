@@ -8,7 +8,10 @@
   "scripts": {
     "build": "webpack --mode production",
     "dev": "webpack serve --mode development",
-    "watch": "webpack --watch --progress --config webpack.config.js"
+    "watch": "webpack --watch --progress --config webpack.config.js",
+    "eslint:check": "eslint . --ext .js,.ts,.tsx",
+    "eslint:fix": "eslint . --ext .js,.ts,.tsx --fix",
+    "check-code": "yarn eslint:check"
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -17,6 +20,9 @@
     "typescript": "^4.9.5"
   },
   "devDependencies": {
+    "@types/react": "^18.0.28",
+    "@typescript-eslint/eslint-plugin": "^5.53.0",
+    "@typescript-eslint/parser": "^5.53.0",
     "eslint": "^8.34.0",
     "eslint-config-prettier": "^8.6.0",
     "eslint-plugin-prettier": "^4.2.1",

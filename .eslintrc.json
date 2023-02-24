@@ -1,0 +1,80 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 12
+  },
+  "plugins": ["react", "react-hooks", "@typescript-eslint", "prettier"],
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "ignorePatterns": ["node_modules/", "dist/", "build/"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier",
+    "plugin:prettier/recommended"
+  ],
+  "rules": {
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+        "args": "after-used",
+        "ignoreRestSiblings": true,
+        "varsIgnorePattern": "^_",
+        "argsIgnorePattern": "^_"
+      }
+    ],
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/no-empty-function": "off",
+    "@typescript-eslint/no-explicit-any": "error",
+    "prettier/prettier": [
+      "error",
+      {
+        "semi": false,
+        "trailingComma": "all",
+        "printWidth": 90,
+        "quoteProps": "consistent",
+        "singleQuote": false,
+        "tabWidth": 2,
+        "useTabs": false,
+        "bracketSpacing": true,
+        "arrowParens": "always",
+        "proseWrap": "preserve",
+        "endOfLine": "lf"
+      }
+    ],
+    "no-array-constructor": "error",
+    "no-bitwise": "error",
+    "no-caller": "error",
+    "no-constructor-return": "error",
+    "no-continue": "error",
+    "no-div-regex": "error",
+    "no-duplicate-imports": "error",
+    "no-else-return": "error",
+    "no-empty-function": "error",
+    "no-empty": ["error", { "allowEmptyCatch": true }],
+    "no-eq-null": "error",
+    "no-eval": "error",
+    "func-name-matching": "error",
+    "func-names": "error",
+    "grouped-accessor-pairs": "error",
+    "guard-for-in": "error",
+    "max-depth": ["error", { "max": 5 }],
+    "max-lines-per-function": ["error", { "max": 750 }],
+    "max-nested-callbacks": ["error", { "max": 3 }],
+    "max-params": ["error", { "max": 3 }],
+    "max-statements-per-line": ["error", { "max": 2 }],
+    "max-statements": ["error", { "max": 100 }]
+  }
+}
