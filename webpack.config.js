@@ -8,7 +8,7 @@ module.exports = {
   mode: "development",
   devtool: "cheap-module-source-map",
   entry: {
-    popup: path.resolve(__dirname, "./src/popup/pop-up.tsx"),
+    popup: path.resolve(__dirname, "./src/app.tsx"),
   },
   module: {
     rules: [
@@ -34,7 +34,7 @@ module.exports = {
     }),
     new htmlWebpackPlugin({
       title: "LN Campaign",
-      filename: "popup.html",
+      filename: "app.html",
       chunks: ["popup"],
     }),
   ],

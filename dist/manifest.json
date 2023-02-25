@@ -10,7 +10,7 @@
   },
   "action": {
     "default_title": "LN Campaign",
-    "default_popup": "popup.html",
+    "default_popup": "app.html",
     "default_icon": "light.png"
   }
 }
