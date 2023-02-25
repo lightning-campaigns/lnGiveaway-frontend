@@ -6,12 +6,12 @@
   "author": "Lightning Campaigns",
   "license": "MIT",
   "scripts": {
-    "build": "webpack --mode production",
-    "dev": "webpack serve --mode development",
-    "watch": "webpack --watch --progress --config webpack.config.js",
+    "build": "webpack --mode=production",
+    "dev": "webpack --watch --progress --mode=development --config webpack.config.js",
     "eslint:check": "eslint . --ext .js,.ts,.tsx",
     "eslint:fix": "eslint . --ext .js,.ts,.tsx --fix",
-    "check-code": "yarn eslint:check"
+    "prettier:check": "prettier --check .",
+    "check-code": "yarn eslint:check && yarn prettier:check"
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -29,6 +29,7 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "html-webpack-plugin": "^5.5.0",
     "prettier": "^2.8.4",
     "webpack": "^5.75.0",
     "webpack-cli": "^5.0.1",

@@ -2,10 +2,14 @@
 /* eslint-disable no-undef */
 const path = require("path")
 const copyWebpackPlugin = require("copy-webpack-plugin")
+const htmlWebpackPlugin = require("html-webpack-plugin")
 
 module.exports = {
   mode: "development",
-  entry: "./src/index.tsx",
+  devtool: "cheap-module-source-map",
+  entry: {
+    popup: path.resolve(__dirname, "./src/popup/pop-up.tsx"),
+  },
   module: {
     rules: [
       {
@@ -28,11 +32,16 @@ module.exports = {
         },
       ],
     }),
+    new htmlWebpackPlugin({
+      title: "LN Campaign",
+      filename: "popup.html",
+      chunks: ["popup"],
+    }),
   ],
   resolve: {
     extensions: [".tsx", ".ts", ".js"],
   },
   output: {
-    filename: "bundle.js",
+    filename: "[name].js",
   },
 }
