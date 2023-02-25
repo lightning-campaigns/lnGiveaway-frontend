@@ -4,9 +4,9 @@
 
 1. Clone the repository
 
-2. Run  `yarn install`
+2. Run `yarn install`
 
-3. Run  `yarn dev`
+3. Run `yarn dev`
 
 This should compile the files to a dist folder. Given that this app is a chrome extension, to see your changes in the browser you have to load the extension in a chrome browser in developer mode.
 
