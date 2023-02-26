@@ -4,13 +4,13 @@
   "description": "lightning campaign giveaway Extension",
   "version": "1.0.0",
   "icons": {
-    "16": "./light.png",
-    "48": "./light.png",
-    "128": "./light.png"
+    "16": "./icons/light.png",
+    "48": "./icons/light.png",
+    "128": "./icons/light.png"
   },
   "action": {
     "default_title": "LN Campaign",
     "default_popup": "app.html",
-    "default_icon": "light.png"
+    "default_icon": "./icons/light.png"
   }
 }
