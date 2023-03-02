@@ -35,6 +35,11 @@ module.exports = {
           },
         ],
       },
+      {
+        test: /\.(svg|png|jpg|jpeg|gif|woff|woff2|tff|eot)$/,
+        use: "assets/resource",
+        type: "assets/resource",
+      },
     ],
   },
   plugins: [
@@ -46,11 +51,7 @@ module.exports = {
         },
       ],
     }),
-    new htmlWebpackPlugin({
-      title: "LN Campaign",
-      filename: "app.html",
-      chunks: ["popup"],
-    }),
+    ...getHtmlPlugins(["popup"]),
   ],
   resolve: {
     extensions: [".tsx", ".ts", ".js"],
@@ -58,4 +59,20 @@ module.exports = {
   output: {
     filename: "[name].js",
   },
+  optimization: {
+    splitChunks: {
+      chunks: "all",
+    },
+  },
+}
+
+function getHtmlPlugins(chunks) {
+  return chunks.map(
+    (chunk) =>
+      new htmlWebpackPlugin({
+        title: "LN Campaign",
+        filename: `${chunk}.html`,
+        chunks: [chunk],
+      }),
+  )
 }

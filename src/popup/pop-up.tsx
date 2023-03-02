@@ -6,6 +6,7 @@ const Popup = () => {
       <h1 className="text-base font-bold">LN giveaway</h1>
       <p>Popup content</p>
       <p>it works now</p>
+      <img src="light.png" alt="test-img" />
     </div>
   )
 }
