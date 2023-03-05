@@ -1,4 +1,5 @@
 import React from "react"
+import Button from "../components/buttons/button"
 
 const Popup = () => {
   return (
@@ -6,7 +7,7 @@ const Popup = () => {
       <h1 className="text-base font-bold">LN giveaway</h1>
       <p>Popup content</p>
       <p>it works now</p>
-      <img src="light.png" alt="test-img" />
+      <Button platform="twitter" path="Twitter.svg" text="Login with" />
     </div>
   )
 }
