@@ -1,11 +1,11 @@
 import React from "react"
 
-interface PropTypes {
+interface ButtonTypes {
   platform?: String
   path?: string
   text: string
 }
-const Button = (props: PropTypes) => {
+const Button = (props: ButtonTypes) => {
   return (
     <>
       <button className="btn bg-blue-700 flex justify-center items-center space-x-4 text-2xl text-center px-3 py-1 w-4/5 rounded-2xl text-white">
