@@ -51,7 +51,7 @@
         "bracketSpacing": true,
         "arrowParens": "always",
         "proseWrap": "preserve",
-        "endOfLine": "true"
+        "endOfLine": "lf"
       }
     ],
     "no-array-constructor": "error",

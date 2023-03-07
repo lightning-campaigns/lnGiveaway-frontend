@@ -1,7 +1,7 @@
 import React from "react"
 
 interface ButtonTypes {
-  platform?: String
+  platform?: string
   path?: string
   text: string
 }
