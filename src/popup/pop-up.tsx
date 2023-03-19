@@ -4,10 +4,12 @@ import Button from "../components/buttons/button"
 
 const Popup = () => {
   return (
-    <div className="bg-orange-300 w-full flex flex-col justify-center items-center">
+    <div className="page-container bg-white w-full flex flex-col items-center">
       <Header />
-      <p>Popup content</p>
-      <p>it works now</p>
+      <div className="h-3/4 bg-white w-full">
+        <p>Popup content</p>
+        <p>it works now</p>
+      </div>
       <Button platform="twitter" path="Twitter.svg" text="Login with" />
     </div>
   )
